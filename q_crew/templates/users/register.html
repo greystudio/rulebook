@@ -1,0 +1,211 @@
+<!-- templates/users/register.html -->
+
+{% extends 'users/user_base.html' %}
+{% load static %}
+
+{% block contents %}
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div style="position: absolute; top: 50%; height: 876.39px; margin-top: -438.195px;">
+            <div class="join">
+                <div class="join-body">
+                    <div class="text-center">
+                        <img src="{% static 'img/django_icon.png' %}" style="width:30%; margin-top:10px; margin-bottom:-30px;">
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <form action="" id="signup" method="POST" novalidate>
+                                {% csrf_token %}
+                        
+                                <!-- 아이디 -->
+                                <div class="mb-4 md-form">
+                                    <label name="label_user_id" for="{{ form.user_id.id_for_label }}">&nbsp;&nbsp;{{ form.user_id.label }}</label>
+                                    {{ form.user_id }}
+                                    <script type="text/javascript">
+                                        if (document.getElementsByName('user_id')[0].value != '') {
+                                            document.getElementsByName('label_user_id')[0].setAttribute('class','active');
+                                        }
+                                    </script>
+                        
+                                    {% if form.user_id.erros %}
+                                    <script type="text/javascript">
+                                        document.getElementsByName('user_id')[0].setAttribute('class', 'form-control is-invalid')
+                                    </script>
+                                    {% for error in form.user_id.errors %}
+                                    <div class="invalid-feedback">
+                                        {{ error }}
+                                    </div>
+                                    {% endfor %}
+                                    {% endif %}      
+                                    <small class="form-text text-muted">
+                                        로그인 시 사용할 아이디를 입력해주세요.
+                                    </small>
+                                </div>
+        
+                                <!--비밀번호-->
+                                <div class="mb-4 md-form">
+                                    <label name="label_password1" for="{{ form.password1.id_for_label }}"><i
+                                            class="fas fa-unlock"></i>&nbsp;&nbsp;비밀번호</label>
+                                    {{ form.password1 }}
+                                    <script type="text/javascript">
+                                        if (document.getElementsByName('password1')[0].value != '') {
+                                            document.getElementsByName('label_password1')[0].setAttribute('class', 'active');
+                                        }
+                                    </script>
+                                    {% if form.password1.errors %}
+                                    <script type="text/javascript">
+                                        document.getElementsByName('password1')[0].setAttribute('class',
+                                            'form-control is-invalid')
+                                    </script>
+                                    {% for error in form.password1.errors %}
+                                    <div style="white-space: nowrap;" class="invalid-feedback">
+                                        {{ error }}
+                                    </div>
+                                    {% endfor %}
+                                    {% endif %}
+                                </div>
+            
+                                <!--비밀번호확인-->
+                                <div class="mb-4 md-form">
+                                    <label name="label_password2" for="{{ form.password2.id_for_label }}"><i
+                                            class="fas fa-unlock-alt"></i>&nbsp;&nbsp;비밀번호 확인</label>
+                                    {{ form.password2 }}
+                                    <script type="text/javascript">
+                                        if (document.getElementsByName('password2')[0].value != '') {
+                                            document.getElementsByName('label_password2')[0].setAttribute('class','active');
+                                        }
+                                    </script>
+                                    {% if form.password2.errors %}
+                                    <script type="text/javascript">
+                                        document.getElementsByName('password2')[0].setAttribute('class',
+                                            'form-control is-invalid')
+                                    </script>
+                                    {% for error in form.password2.errors %}
+                                    <div class="invalid-feedback">
+                                        {{ error }}
+                                    </div>
+                                    {% endfor %}
+                                    {% endif %}
+                                    <small class="form-text text-muted">
+                                        최소 8개의 숫자와 문자 또는 특수기호를 입력해주세요.
+                                    </small>
+                                </div>
+
+                               <!--모임명-->
+                               <div class="mb-4 md-form">
+                                <label name="label_name" for="{{ form.name.id_for_label }}"><i
+                                        class="fas fa-user-edit"></i>&nbsp;&nbsp;{{ form.name.label }}</label>
+                                {{ form.name }}
+                                <script type="text/javascript">
+                                    if (document.getElementsByName('name')[0].value != '') {
+                                        document.getElementsByName('label_name')[0].setAttribute('class', 'active');
+                                    }
+                                </script>
+                                {% if form.name.errors %}
+                                <script type="text/javascript">
+                                    document.getElementsByName('name')[0].setAttribute('class',
+                                        'form-control is-invalid')
+                                </script>
+                                {% for error in form.name.errors %}
+                                <div class="invalid-feedback">
+                                    {{ error }}
+                                </div>
+                                {% endfor %}
+                                {% endif %}
+                                <small class="form-text text-muted">
+                                    모임명을 입력해주세요.
+                                </small>
+                                </div>                                
+
+                               <!--소속회원-->
+                               <div class="mb-4 md-form">
+                                <label name="label_member" for="{{ form.member.id_for_label }}"><i
+                                        class="fas fa-user-edit"></i>&nbsp;&nbsp;{{ form.member.label }}</label>
+                                {{ form.member }}
+                                <script type="text/javascript">
+                                    if (document.getElementsByName('member')[0].value != '') {
+                                        document.getElementsByName('label_member')[0].setAttribute('class', 'active');
+                                    }
+                                </script>
+                                {% if form.member.errors %}
+                                <script type="text/javascript">
+                                    document.getElementsByName('name')[0].setAttribute('class',
+                                        'form-control is-invalid')
+                                </script>
+                                {% for error in form.member.errors %}
+                                <div class="invalid-feedback">
+                                    {{ error }}
+                                </div>
+                                {% endfor %}
+                                {% endif %}
+                                <small class="form-text text-muted">
+                                    모임에 소속된 회원을 입력해주세요.
+                                </small>
+                                </div>
+
+                               <!--총무-->
+                               <div class="mb-4 md-form">
+                                <label name="label_manager" for="{{ form.manager.id_for_label }}"><i
+                                        class="fas fa-user-edit"></i>&nbsp;&nbsp;{{ form.manager.label }}</label>
+                                {{ form.manager }}
+                                <script type="text/javascript">
+                                    if (document.getElementsByName('manager')[0].value != '') {
+                                        document.getElementsByName('label_manager')[0].setAttribute('class', 'active');
+                                    }
+                                </script>
+                                {% if form.manager.errors %}
+                                <script type="text/javascript">
+                                    document.getElementsByName('manager')[0].setAttribute('class',
+                                        'form-control is-invalid')
+                                </script>
+                                {% for error in form.manager.errors %}
+                                <div class="invalid-feedback">
+                                    {{ error }}
+                                </div>
+                                {% endfor %}
+                                {% endif %}
+                                <small class="form-text text-muted">
+                                    총무를 입력해주세요. 
+                                </small>
+                                </div>
+
+                                <!--계좌번호-->
+                                <div class="mb-4 md-form">
+                                    <label name="label_account" for="{{ form.account.id_for_label }}"><i
+                                            class="fas fa-phone"></i>&nbsp;&nbsp;{{ form.account.label }}</label>
+                                    {{ form.account }}
+                                    <script type="text/javascript">
+                                        if (document.getElementsByName('account')[0].value != '') {
+                                            document.getElementsByName('label_account')[0].setAttribute('class', 'active');
+                                        }
+                                    </script>
+                                    {% if form.account.errors %}
+                                    <script type="text/javascript">
+                                        document.getElementsByName('account')[0].setAttribute('class',
+                                            'form-control is-invalid')
+                                    </script>
+                                    {% for error in form.account.errors %}
+                                    <div class="invalid-feedback">
+                                        {{ error }}
+                                    </div>
+                                    {% endfor %}
+                                    {% endif %}
+                                    <small class="form-text text-muted">
+                                        계좌번호를 입력해주세요.
+                                    </small>
+                                </div>
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <input type="submit" class="button submit-button" value="Join">
+                                    </div>
+                                </div>       
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}

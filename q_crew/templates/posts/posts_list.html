@@ -1,0 +1,54 @@
+<!-- templates/posts/posts_list.html -->
+
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block header %}
+<!-- main css -->
+<link rel="stylesheet" href="{% static 'css/main/main.css' %}">
+{% endblock %}
+
+{% block contents %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="board-title">
+                <img class="mx-3" src="{% static '/img/make (1).jpg' %}" alt="">
+                <h4 style="margin:0; font-weight: bold; font-size:2rem">SHARE OUR RULE</h4>
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr class="text-center" style="font-size: 16px">
+                        <th>버전</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>등록일</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if posts %}
+                    {% for posts in posts %}
+                    <tr class="text-center" style="cursor:pointer;  font-size: 16px;" onclick="location.href='/posts/{{ posts.id }}/'">
+                        <td>{{ posts.version }}</td>
+                        <td class="text-left" style="width:50%;">{{ posts.title|truncatechars:30 }}</td>
+                        <td style="width:8%">{{ posts.writer.name }}</td>
+                        <td style="width:15%">{{ posts.registered_date|date:'Y. m. d' }}</td>
+                        <td style="width:8%">{{ posts.hits }}</td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr class="text-center">
+                        <td style="color:gray;" colspan="5">
+                            작성된 백서가 없습니다.
+                        </td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
