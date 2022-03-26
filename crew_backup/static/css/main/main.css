@@ -1,0 +1,501 @@
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Ohsquare';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeferiBaseType-RegularA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: white;
+    color:black;
+    text-align: center;
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    font-size: 62.5%;
+}
+
+a{
+    text-decoration: none;
+    color:black; 
+}
+
+img{
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    color:black;
+  }
+    .card > hr {
+        margin-right: 0;
+        margin-left: 0; }
+    .card > .list-group:first-child .list-group-item:first-child {
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem; }
+    .card > .list-group:last-child .list-group-item:last-child {
+        border-bottom-right-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem; }
+
+.card-header {
+padding: 0.75rem 1.25rem;
+margin-bottom: 0;
+background-color: rgba(0, 0, 0, 0.03);
+border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
+.card-header + .list-group .list-group-item:first-child {
+    border-top: 0; }
+
+
+/* main 페이지 */
+.main-nav{
+    padding: 2rem;
+    z-index: 400;
+    border-bottom: 1px solid #eee;
+}
+
+.main-nav-container{
+    max-width: 78rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-box-align: baseline;
+}
+
+.main-nav-left{
+    color: black;
+    font-size: 2.5rem;
+    max-width: 600px;
+    text-align: center;
+    font-family: 'Cafe24Ohsquare';
+    align-items: baseline;
+    -webkit-box-align: baseline;
+    display: flex;
+}
+
+.nav-menu-link{
+    list-style: none;
+    display: flex;
+    font-family: 'S-CoreDream-3Light';
+    margin-bottom: 0px;
+    font-size: 1rem;
+}
+
+.nav-menu-link li{
+    padding: 0 0rem 0 1.5625rem;
+}
+
+.nav-menu-link a:hover {
+    text-decoration: underline;
+    color: #34558b
+}
+
+
+/* contents */
+.main-container {
+    max-width: 78rem;
+    margin : 2rem 0 8rem 23rem;
+    position: relative;
+    z-index: 100;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+
+.main-row{
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-basis: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-wrap: wrap;
+}
+
+.main-col-4 {
+    box-sizing: border-box;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    max-width: 100%;
+}
+
+.main-box{
+    position: relative;
+}
+
+.main-img{
+    max-width: 70%;
+    margin-top: 120px;
+}
+
+.main-slogan{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 170%;
+}
+
+  .main-button{
+    width: 15rem;
+    position: absolute;
+    top: 57%;
+    left: 63%;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 50px;
+  }
+
+
+/* footer */
+.main-footer{
+    padding: 2rem 0rem 5em;
+}
+
+.main-footer-container{
+    max-width: 78rem;
+    padding-left: 9%;
+    padding-right: 9%;
+    z-index: 100;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.main-footer-container > * {
+    flex: 1 1 0%;
+
+}
+
+.main-footer-info{
+    font-size: 5em;
+    padding: 3.75rem 0;
+    flex-grow: 2.2;
+}
+
+.footer-team{
+    color: black;
+    font-family: 'Cafe24Ohsquare';
+    font-weight: 400;
+    padding-bottom: 10%;
+}
+
+.footer-mail{
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding-bottom: 4%;
+}
+
+.footer-copyright{
+    color: black;
+    font-size: 0.88rem;
+    /* line-height: 0.828; */
+    letter-spacing: 0.3px;
+    margin-bottom: 2em;
+}
+
+.main-footer-who{
+    padding: 3.75rem 0; 
+    font-size: 0.9rem;
+    letter-spacing: 0px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+}
+
+.who-title, .follow-title{
+    margin-bottom: 2rem;
+}
+
+.who-list{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+}
+
+.who-list a{
+    padding: 0.5rem 0px;
+}
+
+.main-footer-follow{
+    padding: 3.75rem 0; 
+    font-size: 0.9rem;
+    letter-spacing: 0px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    flex-grow: 2.5;
+}
+
+.follow-list{
+    display: block;
+
+}
+
+.follow-list ul{
+    display: flex;
+    align-items: center;
+    padding-inline-start: 0px;
+}
+
+.follow-list li{
+    padding-right: 2rem;
+}
+
+
+/* guide 페이지 */
+.guide-info{
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    font-size: 1.1rem;
+    text-align: left;
+    margin: 10% 4% 4% 21%;
+}
+
+.guide-content{
+    display: flex;
+    margin-right: 10%;
+    justify-content: center;
+    font-family: 'S-CoreDream-4Regular';
+}
+
+.guide-content-first{
+    display: flex;
+    align-items: center;
+}
+
+.guide-write, .guide-board{
+    display: flex;
+    margin: 3rem 0;
+}
+
+#guide-icon{
+    display: flex;
+}
+
+#guide-title{
+    text-align: center;
+    padding: 2.6rem 1rem;
+}
+
+#guide-text{
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    font-size: 1.1rem;
+    text-align: left;
+    line-height: 1.7rem;
+    padding: 1rem 2rem;
+}
+
+
+
+
+
+/* write 페이지 */
+.container{
+    padding: 10em 2rem 5rem;
+}
+
+.write-card{
+    /* padding-top: 7rem; */
+    padding-right: 5rem;
+}
+
+.write-card-title{
+    display: flex;
+    justify-content: center;
+    margin-left: 7rem;
+    margin-bottom: 5rem;
+}
+
+.title, .version, .content{
+    display: flex;
+    width: 100%;
+}
+
+.write-card label{
+    width: 15rem;
+    font-family: 'S-CoreDream-3Light';
+    font-size: 1rem;
+    padding: 0.6rem 0;
+}
+
+.write-footer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button{
+    width : 10rem;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: #323232;
+    border-radius: 50px;
+    padding: 8px 16px;
+    margin-bottom:10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    line-height: 26px;    
+  }
+
+
+/* summnernote 커스텀 */
+.note-editing-area{
+    font-size: 20px;
+    text-align: left;
+}
+
+
+/* 댓글 */
+hr {
+    width: 100%;
+}
+
+#more_comment{
+    font-size: 1rem;
+    margin:0 2rem;
+}
+
+#more_comment a:hover{
+    color:  #34558b;
+    text-decoration: underline;
+}
+
+#more_comment hr{
+    width:100%;
+}
+
+
+
+
+
+.note-frame{
+    font-family: 'S-CoreDream-3Light';
+}
+
+
+  /* board 페이지 */
+.board-title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.detail-content{
+    margin: 0 10%;
+}
+
+.list-button{
+    width : 15rem;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: #323232;
+    border-radius: 50px;
+    padding: 8px 16px;
+    margin-bottom:10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    line-height: 26px;  
+  }
+
+
+
+/* detail 페이지 */
+.posts-list-container{
+    padding: 7rem 17rem 5rem;
+}
+
+
+
+/* profile 페이지 */
+.profile-img-frame{
+    /* position: relative; */
+    width:100%;
+    padding:0;
+    overflow: hidden;
+}
+
+.profile-img-center{
+    text-align: center;
+    /* position: absolute;
+    top: 0;
+    right: -200%;
+    bottom: 0;
+    left: -200%; */
+}
+
+.profile-img-frame img{
+
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile-card{
+    border-radius:2rem;
+    border-style: none;
+}
+
+.profile_title{
+    width: 20%;
+}
+
+

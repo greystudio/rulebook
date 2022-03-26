@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Pretendard-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Light';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KCC-eunyoung';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html,body{
+    height: 100%;
+    font-family: 'S-CoreDream-3Light';
+}
+
+#main-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sidebar{
+    width:514px;
+    flex-grow:0;
+    background: #d2e5f6;
+}
+
+.sidebar header{
+    padding: 150px 10px 100px 175px;
+    max-width: 100%;
+    margin:0;
+    text-align: left;
+    line-height: 40px;
+    font-family: 'KCC-eunyoung';
+    font-size: 33px;
+}
+
+.sidebar-artwork{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.artwork{
+    transform: rotate(270deg);
+}
+
+
+/* 로그인 페이지 */
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: auto;
+    width:100%
+}
+
+.auth-nav {
+    display: flex;
+    flex-grow: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 30px 30px 0;
+    /* position: relative; */
+}
+
+.auth-nav p{
+    flex-grow: 1;
+    margin: 0;
+    text-align: right;
+}
+
+
+/* 메인 로그인 */
+main{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.auth-content {
+    margin: 0;
+    padding: 30px 60px 85px;
+    width:100%;
+    max-width: 416px;
+    margin:auto;
+}
+
+.button{
+    position: relative;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 16px;
+    transition: color 200ms ease;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: #0f4c81;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    appearance: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    width:100%
+}
+
+
+/* 회원가입 페이지 */
+
+.join-content {
+    margin: 0;
+    padding: 30px 60px 85px;
+    width:100%;
+    max-width: 500px;
+    margin:auto;
+}
